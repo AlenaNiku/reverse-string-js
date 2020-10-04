@@ -37,14 +37,30 @@
 
 // fizzBuzz()
 
-function isPalindrome (string) {
-    const reversedStr = string.split('').reverse().join('');
+// function isPalindrome (string) {
+//     const reversedStr = string.split('').reverse().join('');
     
-    if (reversedStr === string) {
-        console.log(true) 
-    } else {
-        console.log(false)
+//     if (reversedStr === string) {
+//         console.log(true) 
+//     } else {
+//         console.log(false)
+//     }
+// }
+
+// isPalindrome('racecar')
+
+function findLongestWord(string) {
+    
+    let words = string.split(' ');
+    
+    let longestWord = '';
+
+    for (let word of words) {
+        if (word.length > longestWord.length) {
+            longestWord = word
+        }
     }
+    console.log(longestWord.length)
 }
 
-isPalindrome('racecar')
+findLongestWord("The quick brown fox jumped over the lazy dog")
